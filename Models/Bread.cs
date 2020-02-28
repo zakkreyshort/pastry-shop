@@ -50,6 +50,7 @@ namespace Shop.Models
                 Console.WriteLine("$" + finalCost);
                 Console.WriteLine("Thank you for shopping with us!");
                 IncrementBread(totalBread);
+                Console.WriteLine("-------------------------");
                 // Program.Main();
             }
         }
@@ -57,9 +58,20 @@ namespace Shop.Models
         public void ListSpecial()
         {
             Console.WriteLine("Our special today for bread rolls is buy 2 get 1 free!");
+            Console.WriteLine("------------------------------------------");
+            Program.Main();
+        }
+
+        public void ListMenu()
+        {
+            Console.WriteLine("We serve pastries and rolls!");
+            Console.WriteLine("------------------------------");
+            Program.Main();
         }
         
     }
+
+
 }
 
 

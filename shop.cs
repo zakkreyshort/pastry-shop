@@ -37,7 +37,7 @@ namespace Shop
 
 			else if (response == "menu")
 			{
-
+				roll.ListMenu();
 			}
 
 			else if (response == "specials")
