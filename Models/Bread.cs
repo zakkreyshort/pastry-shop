@@ -44,6 +44,11 @@ namespace Shop.Models
                 Console.WriteLine("Thank you for shopping with us!");
             }
         }
+
+        public void ListSpecial()
+        {
+            Console.WriteLine("Our special today for bread rolls is buy 2 get 1 free!");
+        }
         
     }
 }

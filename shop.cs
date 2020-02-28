@@ -8,6 +8,7 @@ namespace Shop
 	{
 		public static Pastry sweet = new Pastry();
 		public static Bread roll = new Bread();
+
 		public static void Main()
 		{
 			Console.WriteLine("Hi! Welcome to Pierre's Bakery!");
@@ -15,6 +16,7 @@ namespace Shop
 			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials]");
 			string response = Console.ReadLine();
 			response = response.ToLower();
+
 			if (response == "pastry")
 			{
 				Console.WriteLine("Would you like to view types or go right to order form?");
@@ -25,18 +27,23 @@ namespace Shop
 					sweet.BuyPastry();
 				}
 			}
+
 			else if (response == "bread")
 			{
 				roll.BuyBread();
 			}
+
 			else if (response == "menu")
 			{
 
 			}
+
 			else if (response == "specials")
 			{
-
+				sweet.ListSpecial();
+				roll.ListSpecial();
 			}
+
 			else
 			{
 				Console.WriteLine("Sorry, that is not an option, try again.");

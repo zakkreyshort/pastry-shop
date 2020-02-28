@@ -43,6 +43,9 @@ namespace Shop.Models
                 Console.WriteLine("Thank you for shopping with us!");
             }
         }
-        
+        public void ListSpecial()
+        {
+            Console.WriteLine("Our special today for pastry sweets is buy 1 for $2 or 3 for $5!");
+        }
     }
 }
