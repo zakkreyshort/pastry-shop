@@ -25,6 +25,22 @@ namespace Shop.Models
             string pastryAmout = Console.ReadLine();
             int totalPastry = int.Parse(pastryAmout);
             AddAmount(totalPastry);
+            Console.WriteLine("You would like to purchase " + totalPastry + " pastries?");
+            Console.WriteLine("[yes] [no]");
+            string buyAnswer = Console.ReadLine();
+            buyAnswer = buyAnswer.ToLower();
+            if(buyAnswer == "no")
+            {
+                Console.WriteLine("okay lets start again");
+                BuyPastry();
+            }
+            else if (buyAnswer == "yes")
+            {
+                Console.WriteLine("Okay great! Your total is:");
+                int totalPrice = ((totalPastry/3)*2+ totalPastry%3);
+                int finalCost = (totalPrice * 5);
+                Console.WriteLine("$" + finalCost);
+            }
         }
         
     }
