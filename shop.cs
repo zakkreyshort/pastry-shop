@@ -14,7 +14,8 @@ namespace Shop
 		{
 			Console.WriteLine("Hi! Welcome to Pierre's Bakery!");
 			Console.WriteLine("What would you like to do today");
-			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials] [checkout]");
+			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials]");
+			//[checkout]
 			string response = Console.ReadLine();
 			response = response.ToLower();
 
@@ -44,10 +45,10 @@ namespace Shop
 				sweet.ListSpecial();
 				roll.ListSpecial();
 			}
-			else if (response == "checkout")
-			{
-				order.Checkout();
-			}
+			// else if (response == "checkout")
+			// {
+			// 	order.Checkout();
+			// }
 
 			else
 			{

@@ -37,8 +37,8 @@ namespace Shop.Models
             else if (buyAnswer == "yes")
             {
                 Console.WriteLine("Okay great! Your total is:");
-                int totalPrice = ((totalPastry/3)*2+ totalPastry%3);
-                int finalCost = (totalPrice * 5);
+                int totalPrice = (totalPastry/2);
+                int finalCost = ((2*totalPastry)-(totalPrice * 2 - 1));
                 Console.WriteLine("$" + finalCost);
                 Console.WriteLine("Thank you for shopping with us!");
             }

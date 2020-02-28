@@ -50,7 +50,7 @@ namespace Shop.Models
                 Console.WriteLine("$" + finalCost);
                 Console.WriteLine("Thank you for shopping with us!");
                 IncrementBread(totalBread);
-                Program.Main();
+                // Program.Main();
             }
         }
 
