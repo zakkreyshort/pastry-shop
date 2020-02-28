@@ -14,11 +14,17 @@ _This project is a console application written in C#/.NET that acts as a pastry 
 
 | Specification | Example Input | Example Output |
 | ------------- |:-------------:| --------------:|
-| User enters an ailment | Sore Throat | Return: List of doctors in Portland Metro |
-| User enters a doctor name | Allen | Return: List of doctors with 'Allen' in name. |
-| User enters a state/city | or-portland | Return: List of doctors in Portland, Or |
-| User enters an ailment that has no doctors around | Flu | Return: No results found |
-| If API call has error | 400 | Return: Error Message |
+| Console asks for decision | n/a |  [pastry] |
+| User enters a decision | [bread] | _asks question_|
+| Console asks for quantity wanted | 3 | _ask for confirmation_ |
+| Console asks for confirmation | [yes] | _display total_ |
+| Display total & thank you! | n/a | Thank you! |
+| Console asks for decision | n/a | [specials] |
+| Console displays today special | n/a | Buy 2 get 1! |
+| Console asks for decision | n/a | [menu] |
+| Console displays menu | n/a | _we serve rolls & pastries!_ |
+
+
 
 
 
@@ -29,12 +35,13 @@ _This project is a console application written in C#/.NET that acts as a pastry 
 * _Once the project directory is cloned to your desktop, navigate to the directory in the terminal by entering "cd" followed by the name of this repository in the Terminal._
 * _Confirm that you have navigated to the project directory by entering "pwd" in the Terminal._
 * _Once you have navigated to the directory in the terminal, open the contents of the directory in a text editor or IDE of your choice (e.g., to open the contents of the directory in Visual Studio Code, enter the command "code ." in the Terminal)._
-* _Open index.html in a browser of your choice (e.g., Google Chrome)._
+* _Open the terminal within and run the command "dotnet run" to build the application and then start within the console._
+* _Follow commands within the console and enjoy!_
 
 
 
 ## Bugs
-_No known bugs at this time. Properly returns information from both forms in one place._
+_Have not created a separate checkout form inside the order class, or create other types of pastries/rolls. Does display totals._
 
 ## Technologies Used
 
