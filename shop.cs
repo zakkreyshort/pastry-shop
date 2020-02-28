@@ -6,7 +6,8 @@ namespace Shop
 {
 	public class Program
 	{
-		public static Pastry roll = new Pastry();
+		public static Pastry sweet = new Pastry();
+		public static Bread roll = new Bread();
 		public static void Main()
 		{
 			Console.WriteLine("Hi! Welcome to Pierre's Bakery!");
@@ -21,12 +22,12 @@ namespace Shop
 				string optionBread = Console.ReadLine();
 				if (optionBread == "buy")
 				{
-					roll.BuyPastry();
+					sweet.BuyPastry();
 				}
 			}
 			else if (response == "bread")
 			{
-
+				roll.BuyBread();
 			}
 			else if (response == "menu")
 			{
@@ -38,7 +39,7 @@ namespace Shop
 			}
 			else
 			{
-				Console.WriteLine("Sorry, that is not an option, try again.")
+				Console.WriteLine("Sorry, that is not an option, try again.");
 				Main();
 			}
 		}

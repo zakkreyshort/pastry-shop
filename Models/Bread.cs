@@ -1,9 +1,60 @@
-// using System;
-// using System.Collections.Generic;
-// using Shop.Models;
-// using Shop;
+using System;
+using System.Collections.Generic;
+using Shop.Models;
+using Shop;
 
-// namespace Shop.Models
+namespace Shop.Models
+
+{
+    public class Bread
+    {
+        public int Amount { get; set;}
+
+        public Bread()
+        {
+            Amount = 0;
+        }
+
+        public void AddAmount(int amount)
+        {
+            Amount += amount; 
+        }
+    
+        public void BuyBread()
+        {
+            Console.WriteLine("How many rolls would you like to buy?");
+            string breadAmout = Console.ReadLine();
+            int totalBread = int.Parse(breadAmout);
+            AddAmount(totalBread);
+            Console.WriteLine("You would like to purchase " + totalBread + " rolls?");
+            Console.WriteLine("[yes] [no]");
+            string buyAnswer = Console.ReadLine();
+            buyAnswer = buyAnswer.ToLower();
+            if(buyAnswer == "no")
+            {
+                Console.WriteLine("okay lets start again");
+                BuyBread();
+            }
+            else if (buyAnswer == "yes")
+            {
+                Console.WriteLine("Okay great! Your total is:");
+                int totalPrice = ((totalBread/3)*2+ totalBread%3);
+                int finalCost = (totalPrice * 5);
+                Console.WriteLine("$" + finalCost);
+                Console.WriteLine("Thank you for shopping with us!");
+            }
+        }
+        
+    }
+}
+
+
+
+
+
+
+
+
 // {
 //     public class Bread
 //     {
