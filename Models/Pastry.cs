@@ -40,6 +40,7 @@ namespace Shop.Models
                 int totalPrice = ((totalPastry/3)*2+ totalPastry%3);
                 int finalCost = (totalPrice * 5);
                 Console.WriteLine("$" + finalCost);
+                Console.WriteLine("Thank you for shopping with us!");
             }
         }
         

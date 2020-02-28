@@ -24,6 +24,23 @@ namespace Shop
 					roll.BuyPastry();
 				}
 			}
+			else if (response == "bread")
+			{
+
+			}
+			else if (response == "menu")
+			{
+
+			}
+			else if (response == "specials")
+			{
+
+			}
+			else
+			{
+				Console.WriteLine("Sorry, that is not an option, try again.")
+				Main();
+			}
 		}
 	}
 }
