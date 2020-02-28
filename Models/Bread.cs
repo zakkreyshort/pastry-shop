@@ -59,8 +59,8 @@ namespace Shop.Models
             }
             else if (numberBreadAmount%2 == 0)
             {
-                int numberBreadAmount = (numberBreadAmount += 1);
-                int Amount = AddLoaves(numberBreadAmount);
+                numberBreadAmount = (numberBreadAmount + 1);
+                breads.Amount = AddLoaves(numberBreadAmount);
                 breads.Cost = (numberBreadAmount * 5);
                 Console.WriteLine("You want to buy " + breads.Amount + " loaves of bread?");
                 Console.WriteLine("[yes] [no]");
