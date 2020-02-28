@@ -7,13 +7,24 @@ namespace Shop.Models
 {
     public class Pastry
     {
-        public static void ViewTypePastry()
-        {
+        public int Amount { get; set;}
 
+        public Pastry()
+        {
+            Amount = 0;
         }
-        public static void BuyPastry()
-        {
 
+        public void AddAmount(int amount)
+        {
+            Amount += amount; 
+        }
+    
+        public void BuyPastry()
+        {
+            Console.WriteLine("How many pastries would you like to buy?");
+            string pastryAmout = Console.ReadLine();
+            int totalPastry = int.Parse(pastryAmout);
+            AddAmount(totalPastry);
         }
         
     }

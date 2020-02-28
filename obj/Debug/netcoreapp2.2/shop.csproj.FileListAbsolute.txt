@@ -2,3 +2,10 @@
 /Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.csproj.CoreCompileInputs.cache
 /Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.AssemblyInfoInputs.cache
 /Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.AssemblyInfo.cs
+/Users/Guest/Desktop/pastry-shop/bin/Debug/netcoreapp2.2/shop.deps.json
+/Users/Guest/Desktop/pastry-shop/bin/Debug/netcoreapp2.2/shop.runtimeconfig.json
+/Users/Guest/Desktop/pastry-shop/bin/Debug/netcoreapp2.2/shop.runtimeconfig.dev.json
+/Users/Guest/Desktop/pastry-shop/bin/Debug/netcoreapp2.2/shop.dll
+/Users/Guest/Desktop/pastry-shop/bin/Debug/netcoreapp2.2/shop.pdb
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.dll
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.pdb

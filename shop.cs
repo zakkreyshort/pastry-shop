@@ -6,8 +6,7 @@ namespace Shop
 {
 	public class Program
 	{
-		public static Bread roll = new Bread();
-		public static Pastry sweet = new Pastry();
+		public static Pastry roll = new Pastry();
 		public static void Main()
 		{
 			Console.WriteLine("Hi! Welcome to Pierre's Bakery!");
@@ -15,23 +14,16 @@ namespace Shop
 			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials]");
 			string response = Console.ReadLine();
 			response = response.ToLower();
-			if (response == "bread")
+			if (response == "pastry")
 			{
 				Console.WriteLine("Would you like to view types or go right to order form?");
-				Console.WriteLine("[types] [buy]");
+				Console.WriteLine("[buy]");
 				string optionBread = Console.ReadLine();
 				if (optionBread == "buy")
 				{
-					Program.roll.BuyBread();
+					roll.BuyPastry();
 				}
 			}
 		}
-	public static void CreateOrder()
-	{
-		Console.WriteLine("We will need a name for your order. Please enter your name below:");
-		string orderName = Console.ReadLine();
 	}
-	
-	}
-
 }
