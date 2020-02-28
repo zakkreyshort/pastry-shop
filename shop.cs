@@ -15,13 +15,23 @@ namespace Shop
 			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials]");
 			string response = Console.ReadLine();
 			response = response.ToLower();
-			// if statement goes here with all options
+			if (response == "bread")
+			{
+				Console.WriteLine("Would you like to view types or go right to order form?");
+				Console.WriteLine("[types] [buy]");
+				string optionBread = Console.ReadLine();
+				if (optionBread == "buy")
+				{
+					roll.BuyBread();
+				}
+			}
 		}
 	public static void CreateOrder()
 	{
 		Console.WriteLine("We will need a name for your order. Please enter your name below:");
 		string orderName = Console.ReadLine();
 	}
+	
 	}
 
 }

@@ -1,0 +1,4 @@
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.csprojAssemblyReference.cache
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.csproj.CoreCompileInputs.cache
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.AssemblyInfoInputs.cache
+/Users/Guest/Desktop/pastry-shop/obj/Debug/netcoreapp2.2/shop.AssemblyInfo.cs
