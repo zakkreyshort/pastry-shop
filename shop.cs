@@ -22,7 +22,7 @@ namespace Shop
 				string optionBread = Console.ReadLine();
 				if (optionBread == "buy")
 				{
-					roll.BuyBread();
+					Program.roll.BuyBread();
 				}
 			}
 		}

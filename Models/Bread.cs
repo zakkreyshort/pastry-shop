@@ -20,6 +20,7 @@ namespace Shop.Models
         {
             Amount += amount;
         }
+
         public void ViewTypes()
         {
             Console.WriteLine("Currently, we only sell loaves of a single type. Please come back soon for new flavors coming!");
@@ -41,25 +42,26 @@ namespace Shop.Models
                 Console.WriteLine("-----------------------------------");
                 ViewTypes();
             }
-
         }
-        public int BuyBread()
+        public void BuyBread()
         {
          Bread breads = new Bread();   
             Console.WriteLine("Thank you for deciding to buy our delicious loaf. How many would you like?");
             Console.WriteLine("Price: $5/loaf, Buy 2 get 1 Free!");
-            int breadAmount = Console.ReadLine();
-            if (breadAmount == 0)
+            string breadAmount = Console.ReadLine();
+            int numberBreadAmount = int.Parse(breadAmount);
+
+            if (numberBreadAmount == 0)
             {
                 Console.WriteLine("Oh no! This must be an error, you are here to BUY bread:)");
                 Console.WriteLine("-----------------------------------");
                 BuyBread();
             }
-            else if (breadAmount%2 == 0)
+            else if (numberBreadAmount%2 == 0)
             {
-                breads.Cost = (breadAmount * 5);
-                int breadAmount = (breadAmount += 1);
-                int Amount = AddLoaves(breadAmount);
+                int numberBreadAmount = (numberBreadAmount += 1);
+                int Amount = AddLoaves(numberBreadAmount);
+                breads.Cost = (numberBreadAmount * 5);
                 Console.WriteLine("You want to buy " + breads.Amount + " loaves of bread?");
                 Console.WriteLine("[yes] [no]");
                 string acceptBreadAmount = Console.ReadLine();
@@ -76,10 +78,10 @@ namespace Shop.Models
                     BuyBread();
                 }
             }
-            else if (breadAmount == 1)
+            else if (numberBreadAmount == 1)
             {
                 breads.Cost = 5;
-                Amount = breadAmount;
+                Amount = numberBreadAmount;
                 Console.WriteLine("You want to buy " + breads.Amount + " loaf of bread?");
                 Console.WriteLine("[yes] [no]");
                 string acceptBreadAmount2 = Console.ReadLine();
