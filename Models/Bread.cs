@@ -26,7 +26,6 @@ namespace Shop.Models
             order.Pastries += amount;
         }
 
-    
         public void BuyBread()
         {
             Console.WriteLine("How many rolls would you like to buy?");
@@ -37,11 +36,13 @@ namespace Shop.Models
             Console.WriteLine("[yes] [no]");
             string buyAnswer = Console.ReadLine();
             buyAnswer = buyAnswer.ToLower();
+
             if(buyAnswer == "no")
             {
                 Console.WriteLine("okay lets start again");
                 BuyBread();
             }
+            
             else if (buyAnswer == "yes")
             {
                 Console.WriteLine("Okay great! Your total is:");
@@ -67,19 +68,15 @@ namespace Shop.Models
             Console.WriteLine("We serve pastries and rolls!");
             Console.WriteLine("------------------------------");
             Program.Main();
-        }
-        
+        }   
     }
-
-
 }
 
 
 
 
 
-
-
+// everything below this line was not working, will refactor and look over to see where I went wrong.
 
 // {
 //     public class Bread

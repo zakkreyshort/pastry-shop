@@ -23,8 +23,5 @@ namespace Shop.Models{
         {
             Console.WriteLine("You have a total of " + order.Bread + " pastries");
         }
-
-
-
     }
 }
