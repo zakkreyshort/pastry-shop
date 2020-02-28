@@ -8,6 +8,7 @@ namespace Shop.Models
 {
     public class Bread
     {
+    public static Order order = new Order();
         public int Amount { get; set;}
 
         public Bread()
@@ -18,6 +19,11 @@ namespace Shop.Models
         public void AddAmount(int amount)
         {
             Amount += amount; 
+        }
+
+        public void IncrementBread(int amount)
+        {
+            order.Pastries += amount;
         }
 
     
@@ -43,6 +49,8 @@ namespace Shop.Models
                 int finalCost = (totalPrice * 5);
                 Console.WriteLine("$" + finalCost);
                 Console.WriteLine("Thank you for shopping with us!");
+                IncrementBread(totalBread);
+                Program.Main();
             }
         }
 

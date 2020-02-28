@@ -8,6 +8,7 @@ namespace Shop
 	{
 		public static Pastry sweet = new Pastry();
 		public static Bread roll = new Bread();
+		public static Order order = new Order();
 
 		public static void Main()
 		{
@@ -45,7 +46,7 @@ namespace Shop
 			}
 			else if (response == "checkout")
 			{
-				
+
 			}
 
 			else
