@@ -19,6 +19,7 @@ namespace Shop.Models
         {
             Amount += amount; 
         }
+
     
         public void BuyBread()
         {
