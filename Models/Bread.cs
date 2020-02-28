@@ -8,10 +8,12 @@ namespace Shop.Models
     public class Bread
     {
         public int Amount { get; set; }
+        public int Cost { get; set; }
 
         public Bread()
         {
             Amount = 0;
+            Cost = 0;
         }
         public static void ViewTypes()
         {
@@ -31,7 +33,7 @@ namespace Shop.Models
             else
             {
                 Console.WriteLine("Please try again, answer not valid.");
-                Console.WriteLine("-----------------------------------")
+                Console.WriteLine("-----------------------------------");
                 ViewTypes();
             }
 
@@ -41,9 +43,37 @@ namespace Shop.Models
             Console.WriteLine("Thank you for deciding to buy our delicious loaf. How many would you like?");
             Console.WriteLine("Price: $5/loaf, Buy 2 get 1 Free!");
             int breadAmount = Console.ReadLine();
-            if (breadAmount == 1)
+            if (breadAmount == 0)
             {
-                
+                Console.WriteLine("Oh no! This must be an error, you are here to BUY bread:)");
+                Console.WriteLine("-----------------------------------");
+                BuyBread();
+            }
+            else if (breadAmount%2 == 0)
+            {
+                Bread.Cost = (breadAmount * 5);
+                breadAmount = (breadAmount += 1);
+                Amount = breadAmount;
+                Console.WriteLine("You want to buy " + Bread.Amount + " loaves of bread?");
+                Console.WriteLine("[yes] [no]");
+                string acceptBreadAmount = Console.ReadLine();
+                acceptBreadAmount = acceptBreadAmount.ToLower();
+                if (acceptBreadAmount == "yes")
+                {
+                    Console.WriteLine("Your final cost will be " + Bread.Cost);
+                    Console.WriteLine("Thank you for shopping with us!");
+                }
+                else if (acceptBreadAmount == "no")
+                {
+                    Console.WriteLine("Okay, lets start over.");
+                    Console.WriteLine("-----------------------------------");
+                    BuyBread();
+                }
+
+            }
+            else if (breadAmount == even)
+            {
+                //buy one get one freeeeeeee
             }
         }
 
