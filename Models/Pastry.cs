@@ -8,12 +8,10 @@ namespace Shop.Models
   public class Pastry
   {
     public int Amount { get; set;}
-
 		public Pastry()
 		{
 			Amount = 0;
 		}
-
 		public void AddAmount(int amount)
 		{
 			Amount += amount; 

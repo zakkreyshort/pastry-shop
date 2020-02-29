@@ -4,13 +4,11 @@ using Shop.Models;
 using Shop;
 
 namespace Shop.Models
-
 {
   public class Bread
   {
   	public static Order order = new Order();
       public int Amount { get; set;}
-
       public Bread()
       {
         Amount = 0;
@@ -28,47 +26,45 @@ namespace Shop.Models
 
       public void BuyBread()
       {
-				Console.WriteLine("How many rolls would you like to buy?");
-				string breadAmout = Console.ReadLine();
-				int totalBread = int.Parse(breadAmout);
-				AddAmount(totalBread);
-				Console.WriteLine("You would like to purchase " + totalBread + " rolls?");
-				Console.WriteLine("[yes] [no]");
-				string buyAnswer = Console.ReadLine();
-				buyAnswer = buyAnswer.ToLower();
+		Console.WriteLine("How many rolls would you like to buy?");
+		string breadAmout = Console.ReadLine();
+		int totalBread = int.Parse(breadAmout);
+		AddAmount(totalBread);
+		Console.WriteLine("You would like to purchase " + totalBread + " rolls?");
+		Console.WriteLine("[yes] [no]");
+		string buyAnswer = Console.ReadLine();
+		buyAnswer = buyAnswer.ToLower();
 
-					if(buyAnswer == "no")
-					{
-						Console.WriteLine("okay lets start again");
-						BuyBread();
-					}
-					
-					else if (buyAnswer == "yes")
-					{
-						Console.WriteLine("Okay great! Your total is:");
-						int totalPrice = ((totalBread/3)*2+ totalBread%3);
-						int finalCost = (totalPrice * 5);
-						Console.WriteLine("$" + finalCost);
-						Console.WriteLine("Thank you for shopping with us!");
-						IncrementBread(totalBread);
-						Console.WriteLine("-------------------------");
-						// Program.Main();
-					}
-			}
-
-			public void ListSpecial()
+			if(buyAnswer == "no")
 			{
-				Console.WriteLine("Our special today for bread rolls is buy 2 get 1 free!");
-				Console.WriteLine("------------------------------------------");
-				Program.Main();
+				Console.WriteLine("okay lets start again");
+				BuyBread();
 			}
-
-			public void ListMenu()
+			
+			else if (buyAnswer == "yes")
 			{
-				Console.WriteLine("We serve pastries and rolls!");
-				Console.WriteLine("------------------------------");
-				Program.Main();
-			}   
+				Console.WriteLine("Okay great! Your total is:");
+				int totalPrice = ((totalBread/3)*2+ totalBread%3);
+				int finalCost = (totalPrice * 5);
+				Console.WriteLine("$" + finalCost);
+				Console.WriteLine("Thank you for shopping with us!");
+				IncrementBread(totalBread);
+				Console.WriteLine("-------------------------");
+				// Program.Main();
+			}
+		}
+		public void ListSpecial()
+		{
+			Console.WriteLine("Our special today for bread rolls is buy 2 get 1 free!");
+			Console.WriteLine("------------------------------------------");
+			Program.Main();
+		}
+		public void ListMenu()
+		{
+			Console.WriteLine("We serve pastries and rolls!");
+			Console.WriteLine("------------------------------");
+			Program.Main();
+		}   
   }
 }
 
