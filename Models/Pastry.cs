@@ -16,13 +16,14 @@ namespace Shop.Models
 		{
 			Amount += amount; 
 		}
-    
+
 		public void BuyPastry()
 		{
 			Console.WriteLine("How many pastries would you like to buy?");
 			string pastryAmout = Console.ReadLine();
 			int totalPastry = int.Parse(pastryAmout);
 			AddAmount(totalPastry);
+			Order.addOrder(totalPastry);
 			Console.WriteLine("You would like to purchase " + totalPastry + " pastries?");
 			Console.WriteLine("[yes] [no]");
 			string buyAnswer = Console.ReadLine();
@@ -38,9 +39,21 @@ namespace Shop.Models
 					int totalPrice = (totalPastry/2);
 					int finalCost = ((2*totalPastry)-(totalPrice * 2 - 1));
 					Console.WriteLine("$" + finalCost);
+					Order.addOrder(finalCost);
 					Console.WriteLine("Thank you for shopping with us!");
+					Console.WriteLine("Do you need anything else?");
+					string userAnswer = Console.ReadLine();
+					if (userAnswer == "yes")
+					{
+						Program.Main();
+					}
+					else if (userAnswer == "no")
+					{
+
+					}
 			}
 		}
+
 		public void ListSpecial()
 		{
 			Console.WriteLine("Our special today for pastry sweets is buy 1 for $2 or 3 for $5!");
