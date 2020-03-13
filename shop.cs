@@ -6,56 +6,43 @@ namespace Shop
 {
 	public class Program
 	{
-		public static Bread roll = new Bread();
-		public static Pastry sweet = new Pastry();
-		public static Order order = new Order();
-
+	
 		public static void Main()
 		{
-			Console.WriteLine("Hi! Welcome to Pierre's Bakery!");
-			Console.WriteLine("What would you like to do today");
-			Console.WriteLine("Buy:[bread] [pastry] View: [menu] [specials]");
-			//[checkout]
-			string response = Console.ReadLine();
-			response = response.ToLower();
+			Console.WriteLine("Hello, and welcome to my bakery!");
+			Console.WriteLine("Our special today is buy 2, get 1 free bread rolls and 1 for $2 or 3 for $5 pastries");
+			Console.WriteLine("What would you like to buy?");
+			Console.WriteLine("[bread] [pastry] [checkout]");
+			string buySomething = Console.ReadLine();
 
-			if (response == "pastry")
+			if(buySomething == "bread")
 			{
-				Console.WriteLine("Would you like to view types or go right to order form?");
-				Console.WriteLine("[buy]");
-				string optionBread = Console.ReadLine();
-				if (optionBread == "buy")
-				{
-					sweet.BuyPastry();
-				}
+				Console.WriteLine("How many bread rolls would you like?");
+				int customerBread = int.Parse(Console.ReadLine());
+				Bread.FinalBreadPrice(customerBread);
+				Console.WriteLine("You added " + Bread.BreadAmount + " loaves to your cart");
+				Main();
 			}
-
-			else if (response == "bread")
+			else if(buySomething == "pastry")
 			{
-				roll.BuyBread();
+				Console.WriteLine("How many sweet rolls would you like?");
+				int customerSweets = int.Parse(Console.ReadLine());
+				Pastry.FinalPastryPrice(customerSweets);
+				Console.WriteLine("You added " + Pastry.PastryAmount + " loaves to your cart");
+				Main();
 			}
-
-			else if (response == "menu")
+			else if (buySomething == "checkout")
 			{
-				roll.ListMenu();
+				Console.WriteLine("Your total is:" + " $" + (Pastry.PastryPrice+Bread.BreadPrice));
+				Console.WriteLine("Thank you for shopping with us!");
 			}
-
-			else if (response == "specials")
-			{
-				sweet.ListSpecial();
-				roll.ListSpecial();
-			}
-			
-			// else if (response == "checkout")
-			// {
-			// 	order.Checkout();
-			// }
-
 			else
 			{
-				Console.WriteLine("Sorry, that is not an option, try again.");
+				Console.WriteLine("You entered something wrong! Please try again");
+				Console.WriteLine("--------------------------------------");
 				Main();
 			}
 		}
-	}
+	}	
 }
+	

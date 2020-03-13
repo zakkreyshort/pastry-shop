@@ -16,17 +16,8 @@ _This project is a console application written in C#/.NET that acts as a pastry 
 | ------------- |:-------------:| --------------:|
 | Console asks for decision | n/a |  [pastry] |
 | User enters a decision | [bread] | _asks question_|
-| Console asks for quantity wanted | 3 | _ask for confirmation_ |
-| Console asks for confirmation | [yes] | _display total_ |
-| Display total & thank you! | n/a | Thank you! |
-| Console asks for decision | n/a | [specials] |
-| Console displays today special | n/a | Buy 2 get 1! |
-| Console asks for decision | n/a | [menu] |
-| Console displays menu | n/a | _we serve rolls & pastries!_ |
-
-
-
-
+| Console asks for quantity wanted | 3 | back to main |
+| User chooses to either buy more or checkout | [checkout] | Console displays "Your total is: $ |
 
 
 ## Setup/Installation Requirements

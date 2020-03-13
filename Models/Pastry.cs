@@ -7,56 +7,20 @@ namespace Shop.Models
 {
   public class Pastry
   {
-    public int Amount { get; set;}
-		public Pastry()
-		{
-			Amount = 0;
-		}
-		public void AddAmount(int amount)
-		{
-			Amount += amount; 
-		}
+	 public static int PastryPrice { get; set; }
+	 public static int PastryAmount { get; set; }
+	 public static void FinalPastryPrice(int count)
+	 {
+		 PastryAmount = count;
 
-		public void BuyPastry()
-		{
-			Console.WriteLine("How many pastries would you like to buy?");
-			string pastryAmout = Console.ReadLine();
-			int totalPastry = int.Parse(pastryAmout);
-			AddAmount(totalPastry);
-			Order.addOrder(totalPastry);
-			Console.WriteLine("You would like to purchase " + totalPastry + " pastries?");
-			Console.WriteLine("[yes] [no]");
-			string buyAnswer = Console.ReadLine();
-			buyAnswer = buyAnswer.ToLower();
-			if(buyAnswer == "no")
-			{
-					Console.WriteLine("okay lets start again");
-					BuyPastry();
-			}
-			else if (buyAnswer == "yes")
-			{
-					Console.WriteLine("Okay great! Your total is:");
-					int totalPrice = (totalPastry/2);
-					int finalCost = ((2*totalPastry)-(totalPrice * 2 - 1));
-					Console.WriteLine("$" + finalCost);
-					Order.addOrder(finalCost);
-					Console.WriteLine("Thank you for shopping with us!");
-					Console.WriteLine("Do you need anything else?");
-					string userAnswer = Console.ReadLine();
-					if (userAnswer == "yes")
-					{
-						Program.Main();
-					}
-					else if (userAnswer == "no")
-					{
-
-					}
-			}
-		}
-
-		public void ListSpecial()
-		{
-			Console.WriteLine("Our special today for pastry sweets is buy 1 for $2 or 3 for $5!");
-		}
+		 if (PastryAmount >=3)
+		 {
+			PastryPrice = ((PastryAmount/3*5 + (PastryAmount %3)*2));
+		 }
+		 else
+		 {
+			 PastryPrice = PastryAmount * 2;
+		 }
+	 }
   }
 }
